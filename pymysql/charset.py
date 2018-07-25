@@ -267,4 +267,6 @@ def charset_to_encoding(name):
     """Convert MySQL's charset name to Python's codec name"""
     if name == 'utf8mb4':
         return 'utf8'
+    if name == 'ucs2':
+        return 'utf_16_le'
     return name
